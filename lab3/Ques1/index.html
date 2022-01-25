@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Hariket Sukesh Kumar Sheth</title>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="hero">
+        <h1 class="main-heading animate__animated animate__fadeInDown">
+          BeSAFE - COVID19
+        </h1>
+        <p class="paragraph animate__animated animate__fadeInUp">
+          Get to know about the latest COVID19 Guidelines and experiences of
+          people infected with COVID19. BeSafe brings you the service of its own
+          Audio Player service just for your convinienence
+        </p>
+      </div>
+
+      <div class="cta">
+        <div class="feature animate__animated animate__fadeIn">
+          <span>Try our audio assisted Registration</span> service for creation
+          of new account
+        </div>
+        <form action="#" method="POST" class="form">
+          <div class="input-wrapper animate__animated animate__fadeIn">
+            <label for="first-name" class="hidden"
+              >First Name
+            </label>
+            <audio hidden>
+                <source
+                  src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Julie_Maxwells_Piano_Music/Classic_Piano_Collection_from_the_Princess_of_Mars/Julie_Maxwells_Piano_Music_-_21_-_Prison_Walls.mp3"
+                  type="audio/mp3"
+                />
+              </audio>
+            <span><i class="fa fa-volume-up fa-2x" style="position: absolute; top: 15px; left: 220px; color:grey;opacity:.5"></i></span>
+            <input
+              required
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              class="form__first-name"
+            />
+            
+            <div class="validity-icon"></div>
+          </div>
+          <div class="input-wrapper animate__animated animate__fadeIn">
+            <label for="last-name" class="hidden">Last Name</label>
+            <span><i class="fa fa-volume-up fa-2x" style="position: absolute; top: 15px; left: 220px; color:grey;opacity:.5"></i></span>
+            <audio hidden>
+                <source
+                  src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Julie_Maxwells_Piano_Music/Classic_Piano_Collection_from_the_Princess_of_Mars/Julie_Maxwells_Piano_Music_-_21_-_Prison_Walls.mp3"
+                  type="audio/mp3"
+                />
+              </audio>
+            <input
+              required
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last Name"
+              class="form__last-name"
+            />
+            <div class="validity-icon"></div>
+          </div>
+          <div class="input-wrapper animate__animated animate__fadeIn">
+            <label for="email" class="hidden">Email</label>
+            <span><i class="fa fa-volume-up fa-2x" style="position: absolute; top: 15px; left: 220px; color:grey;opacity:.5"></i></span>
+            <audio hidden>
+                <source
+                  src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Julie_Maxwells_Piano_Music/Classic_Piano_Collection_from_the_Princess_of_Mars/Julie_Maxwells_Piano_Music_-_21_-_Prison_Walls.mp3"
+                  type="audio/mp3"
+                />
+              </audio>
+            <input
+              required
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              class="form__email"
+            />
+            <div class="validity-icon"></div>
+          </div>
+          <div class="input-wrapper animate__animated animate__fadeIn">
+            <label for="password" class="hidden">Password</label>
+            <input
+              required
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="form__password"
+            />
+            <div class="validity-icon"></div>
+          </div>
+          <div class="button-wrapper">
+            <button type="submit" class="animate__animated animate__bounceIn">
+              Create Account
+            </button>
+          </div>
+          <p class="form__disclaimer animate__animated animate__fadeIn">
+            By clicking the button, you are agreeing to BeSAFE
+            <a href="#">Terms and Services.</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

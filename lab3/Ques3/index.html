@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h2>Using < svg > </h2>
+        <svg width="236" height="392" viewBox="-80 200 436 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M235.5 107C235.5 165.773 182.941 213.5 118 213.5C53.0594 213.5 0.5 165.773 0.5 107C0.5 48.2266 53.0594 0.5 118 0.5C182.941 0.5 235.5 48.2266 235.5 107Z" fill="#1CE4F1" stroke="black"/>
+            <line x1="118.5" y1="214" x2="118.5" y2="492" stroke="black"/>
+            <line x1="118.344" y1="358.637" x2="212.344" y2="447.637" stroke="black"/>
+            <line x1="118.354" y1="359.354" x2="29.3536" y2="448.354" stroke="black"/>
+            </svg>
+            <br><br>
+            <br><br>
+            <h2>Using < canvas > </h2>
+            <canvas id="myCanvas" width="400" height="10000" ></canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.fillStyle = "#1CE4F1";
+                ctx.arc(115, 50, 50, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.moveTo(115, 100);
+                ctx.lineTo(115, 250);
+                ctx.moveTo(115, 180);
+                ctx.lineTo(70, 230);
+                ctx.moveTo(115, 180);
+                ctx.lineTo(160, 230);
+                ctx.stroke();
+            </script>
+    </body>
+</html>
