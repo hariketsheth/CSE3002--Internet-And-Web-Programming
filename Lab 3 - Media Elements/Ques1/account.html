@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Hariket Sukesh Kumar Sheth</title>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="hero">
+        <img
+          width="150"
+          height="150"
+          style="
+            position: block;
+            margin: 15px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+          src="https://upload.wikimedia.org/wikipedia/commons/8/82/SARS-CoV-2_without_background.png"
+        />
+        <h1 class="main-heading animate__animated animate__fadeInDown">
+          BeSAFE - COVID19
+        </h1>
+        <p class="paragraph animate__animated animate__fadeInUp">
+          Get to know about the latest COVID19 Guidelines and experiences of
+          people infected with COVID19. BeSafe brings you the service of its own
+          Audio Player service just for your convinienence
+        </p>
+        <br /><br />
+        <label for="selection">Listen:</label>
+        <select id="selection">
+          <option value="">- Select a Guideline -</option>
+          <option
+            value="https://storage.soundoftext.com/e97f1360-7dfd-11ec-a277-2d88d602f871.mp3"
+          >
+            1. Introduction COVID19
+          </option>
+          <option
+            value="https://storage.soundoftext.com/13477ca0-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            2. Symptoms of COVID19
+          </option>
+          <option
+            value="https://storage.soundoftext.com/2d20eb20-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            3. Preventive Measures
+          </option>
+          <option
+            value="https://storage.soundoftext.com/2e6048f0-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            4. Medications and Treatments
+          </option>
+          <option
+            value="https://storage.soundoftext.com/30c2ca00-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            5. Quarantine Guidelines
+          </option>
+          <option
+            value="https://storage.soundoftext.com/326f6890-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            6. Wearing Mask and Personal Hygiene
+          </option>
+
+          <option
+            value="https://storage.soundoftext.com/34ff1420-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            7. Vaccination Details and Guidelines
+          </option>
+          <option
+            value="https://storage.soundoftext.com/371e71b0-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            8. Travelling Guidelines
+          </option>
+          <option
+            value="https://storage.soundoftext.com/390b2680-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            9. Official Notification from WHO
+          </option>
+          <option
+            value="https://storage.soundoftext.com/3b1eeb50-7dfe-11ec-a277-2d88d602f871.mp3"
+          >
+            10. Official Notification from MoHFW
+          </option>
+        </select>
+        <br />
+
+        <audio id="player" controls="controls">
+          <source
+            id="mp3_src"
+            preload="auto"
+            src="https://storage.soundoftext.com/b05c91d0-7dfc-11ec-a277-2d88d602f871.mp3"
+            type="audio/mp3"
+          />
+          Your browser does not support the audio element.
+        </audio>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="./script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
