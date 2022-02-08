@@ -20,39 +20,38 @@
       </h1>
       <p class="paragraph animate__animated animate__fadeInUp">
         <h3 style="text-align: center; color: #b94b4b;">Hariket Sukesh Kumar Sheth | 20BCE1975</h3><br>
-        Exercise 1: Print the Sum of N numbers using Javascript
-        <ul class="animate__animated animate__fadeInUp" style="list-style-position: inside; text-align: center;">
-          <li>Internal Javascript</li>
-        </ul>
+        Exercise 2: Write a java script program to check two numbers and return true if one of the number is 200 or if
+        the sum of the two numbers is 200
+
       </p>
       <br /><br />
-      <span id="number3" for="selection">The result of Sum of 0 numbers is:</span>
-      <input type="text" disabled id="result3"
+      <span id="number1" for="selection">The result of Comparison of entered numbers is:</span>
+      <input type="text" disabled id="result1"
         style="font-weight: bolder; text-align: center; color: #000; text-indent: 40px; border: none; height: 50px; border-radius: 30px; background: #eee;">
-      <br>
-      <div>
-        <a href="index2.html" style="text-decoration: none;"><button
-            style="margin-left: 50%; border: none; padding: 10px; background: #fff; color: #b94b4b; border-radius: 10px;"
-            value="Back">Back</button></a>
-      </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="./script.js"></script>
     </div>
   </div>
   <script>
-    const num = parseInt(prompt('Enter the number N: '));
-    if (num.length <= 0 || isNaN(num)) {
-      alert('Invalid Input!! Please try again');
-      document.location.reload(true);
-    }
-    const text = "The result of Sum of ";
-    document.getElementById("number3").innerHTML = text + num + " numbers is:";
+    function check() {
+      const num1 = parseInt(prompt('Enter the number N1: '));
+      const num2 = parseInt(prompt('Enter the number N2: '));
+      if (num1.length <= 0 || isNaN(num1) || isNaN(num2) || num2.length <= 0) {
+        alert('Invalid Input!! Please try again');
+        document.location.reload(true);
+      }
+      const text = "The result of Comparison of entered numbers [";
+      document.getElementById("number1").innerHTML = text + num1 + ", " + num2 + "] is:";
 
-    let sum = 0;
-
-    for (let i = 1; i <= num; i++) {
-      sum += i;
+      if(num1===200 || num2===200 || num1+num2===200)
+        return true;
+      else
+        return false;
     }
-    document.getElementById("result3").value = sum;
+    if (check())
+      document.getElementById("result1").value = "Returned True!!";
+    else
+      document.getElementById("result1").value = "Returned False!!";
   </script>
 </body>
 
