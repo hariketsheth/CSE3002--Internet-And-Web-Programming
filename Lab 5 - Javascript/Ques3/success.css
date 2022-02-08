@@ -1,0 +1,147 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    zoom: 95%;
+}
+
+:root {
+    --hue: 223;
+    --bg: hsl(var(--hue), 90%, 20%);
+    --fg: hsl(var(--hue), 10%, 90%);
+    --primary: hsl(var(--hue), 90%, 55%);
+    --primary-dn: hsl(var(--hue), 90%, 45%);
+    font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+
+body,
+button {
+    font: 1em/1.5 Hind, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    animation: reappear 3s steps(1) forwards;
+    background-color: var(--primary);
+    border-radius: 0.2em;
+    color: hsl(0, 0%, 100%);
+    padding: 0.5em 1em;
+    transition: background-color 0.1s linear;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+}
+
+h2 {
+    animation: reappear 3s steps(1) forwards;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 10px;
+}
+
+img {
+    animation: reappear 3s steps(1) forwards;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+button:focus,
+button:hover {
+    background-color: var(--primary-dn);
+}
+
+button:focus {
+    outline: none;
+}
+
+button,
+.check-spinner__worm-a,
+.check-spinner__worm-b {
+    visibility: hidden;
+}
+
+.check-spinner {
+    margin-bottom: 3em;
+    overflow: visible;
+    width: 6.25em;
+    height: 6.25em;
+}
+
+.check-spinner__worm-a {
+    animation: worm-a 1.2s linear;
+}
+
+.check-spinner__worm-b {
+    animation: worm-b 1.2s 1.2s linear forwards;
+    stroke-dashoffset: 0.01;
+}
+
+.check-spinner__circle {
+    animation: circle 0.2s 2.3s cubic-bezier(0, 0, .42, 1.33) forwards;
+}
+
+/* Animations */
+@keyframes worm-a {
+    from {
+        stroke-dashoffset: 36.1;
+        visibility: visible;
+    }
+
+    to {
+        stroke-dashoffset: -252.9;
+        visibility: visible;
+    }
+}
+
+@keyframes worm-b {
+    from {
+        animation-timing-function: linear;
+        stroke-dasharray: 0 0 72.2 341.3;
+        visibility: visible;
+    }
+
+    69.7% {
+        animation-timing-function: ease-out;
+        stroke-dasharray: 0 207 45 341.3;
+        visibility: visible;
+    }
+
+    to {
+        animation-timing-function: ease-out;
+        stroke-dasharray: 0 297 45 341.3;
+        visibility: visible;
+    }
+}
+
+@keyframes circle {
+    from {
+        r: 0;
+    }
+
+    to {
+        r: 50px;
+    }
+}
+
+@keyframes reappear {
+    from {
+        visibility: hidden;
+    }
+
+    to {
+        visibility: visible;
+    }
+}
