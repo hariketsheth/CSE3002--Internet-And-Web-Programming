@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Hariket Sukesh Kumar Sheth</title>
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div class="hero">
+      <h1 class="main-heading animate__animated animate__fadeInDown">
+        Lab 5 - Internet and Web Programming
+      </h1>
+      <p class="paragraph animate__animated animate__fadeInUp">
+        <h3 style="text-align: center; color: #b94b4b;">Hariket Sukesh Kumar Sheth | 20BCE1975</h3><br>
+        Exercise 1: Print the Sum of N numbers using Javascript
+        <ul class="animate__animated animate__fadeInUp" style="list-style-position: inside; text-align: center;">
+          <li>Internal Javascript</li>
+        </ul>
+      </p>
+      <br /><br />
+      <span id="number3" for="selection">The result of Sum of 0 numbers is:</span>
+      <input type="text" disabled id="result3"
+        style="font-weight: bolder; text-align: center; color: #000; text-indent: 40px; border: none; height: 50px; border-radius: 30px; background: #eee;">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </div>
+  </div>
+  <script>
+    const num = parseInt(prompt('Enter the number N: '));
+    if (num.length <= 0 || isNaN(num)) {
+      alert('Invalid Input!! Please try again');
+      document.location.reload(true);
+    }
+    const text = "The result of Sum of ";
+    document.getElementById("number3").innerHTML = text + num + " numbers is:";
+
+    let sum = 0;
+
+    for (let i = 1; i <= num; i++) {
+      sum += i;
+    }
+    document.getElementById("result3").value = sum;
+  </script>
+</body>
+
+</html>
