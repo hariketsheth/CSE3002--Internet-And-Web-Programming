@@ -311,23 +311,3 @@ body {
 .attribution a {
   color: var(--color-blue);
 }
-
-select,
-option {
-  background: rgb(245, 245, 245);
-  color: rgb(94, 94, 94);
-  border-radius: 30px;
-  padding: 10px;
-  border: none;
-}
-
-#player {
-  position: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-panel {
-  background-color: hsl(0, 100%, 87%);
-}

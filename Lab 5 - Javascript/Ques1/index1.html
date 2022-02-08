@@ -30,13 +30,34 @@
       <input type="text" disabled id="result1"
         style="font-weight: bolder; text-align: center; color: #000; text-indent: 40px; border: none; height: 50px; border-radius: 30px; background: #eee;">
       <br>
-      <div>
+      <div style="display: grid; grid-template-columns: auto auto;">
+        <a style="text-decoration: none;"><button onclick="inlineJavascript()"
+            style="margin-left: 40%; border: none; padding: 10px; background: #fff; color: #b94b4b; border-radius: 10px;"
+            value="Run">Run</button></a>
         <a href="index2.html" style="text-decoration: none;"><button
-            style="margin-left: 50%; border: none; padding: 10px; background: #fff; color: #b94b4b; border-radius: 10px;"
+            style="margin-left: 60%; border: none; padding: 10px; background: #fff; color: #b94b4b; border-radius: 10px;"
             value="Next">Next</button></a>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script src="./script.js"></script>
+      <script>
+        function inlineJavascript() {
+          const num = parseInt(prompt('Enter the number N: '));
+          if (num.length <= 0 || isNaN(num)) {
+            alert('Invalid Input!! Please try again');
+            document.location.reload(true);
+          }
+          const text = "The result of Sum of ";
+          document.getElementById("number1").innerHTML = text + num + " numbers is:";
+
+          let sum = 0;
+
+          for (let i = 1; i <= num; i++) {
+            const temp = parseInt(prompt('Enter the number ' + i + ': '));
+            sum += temp;
+          }
+          document.getElementById("result1").value = sum;
+        }
+      </script>
     </div>
   </div>
 </body>

@@ -50,7 +50,8 @@
     let sum = 0;
 
     for (let i = 1; i <= num; i++) {
-      sum += i;
+      const temp = parseInt(prompt('Enter the number ' + i + ': '));
+      sum += temp;
     }
     document.getElementById("result3").value = sum;
   </script>

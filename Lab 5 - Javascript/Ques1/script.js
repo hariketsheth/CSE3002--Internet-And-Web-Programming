@@ -8,6 +8,7 @@ document.getElementById("number2").innerHTML = text + number + " numbers is:";
 let sum = 0;
 
 for (let i = 1; i <= number; i++) {
-    sum += i;
+    const temp = parseInt(prompt('Enter the number '+i+': '));
+    sum += temp;
 }
 document.getElementById("result2").value = sum;

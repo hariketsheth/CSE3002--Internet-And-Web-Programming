@@ -1,10 +1,11 @@
-body{
+body {
     font-family: 'Droid Serif', serif;
     font-size: 14px;
     color: #2f2f2f;
     background-color: #f9f7f1;
 }
-header{
+
+header {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-size: 80px;
@@ -14,21 +15,22 @@ header{
     margin-bottom: 20px;
 
 }
-p{
+
+p {
     margin-top: 0;
     margin-bottom: 20px;
 }
-.head{
+
+.head {
     text-align: center;
     position: relative;
 
 
 }
 
-.headerobjectswrapper{
-}
+.headerobjectswrapper {}
 
-.subhead{
+.subhead {
     text-transform: uppercase;
     border-bottom: 2px solid #2f2f2f;
     border-top: 2px solid #2f2f2f;
@@ -36,7 +38,7 @@ p{
 
 }
 
-.content{
+.content {
     font-size: 0;
     line-height: 0;
     word-spacing: -.31em;
@@ -45,11 +47,10 @@ p{
 
 
 }
-.collumns{
 
-}
+.collumns {}
 
-.collumn{
+.collumn {
     font-size: 14px;
     line-height: 20px;
     width: 17.5%;
@@ -59,10 +60,12 @@ p{
     margin-bottom: 50px;
     transition: all .7s;
 }
-.collumn + .collumn { 
-  border-left: 1px solid #2f2f2f;
+
+.collumn+.collumn {
+    border-left: 1px solid #2f2f2f;
 }
-.collumn .headline{
+
+.collumn .headline {
     text-align: center;
     line-height: normal;
     font-family: 'Playfair Display', serif;
@@ -73,20 +76,22 @@ p{
 }
 
 
-.collumn .headline.hl3{
+.collumn .headline.hl3 {
     font-weight: 400;
     font-style: italic;
     font-size: 36px;
     box-sizing: border-box;
     padding: 10px 0 10px 0;
 }
-.collumn .headline.hl4{
+
+.collumn .headline.hl4 {
     font-weight: 700;
     font-size: 12px;
     box-sizing: border-box;
     padding: 10px 0 10px 0;
 }
-.collumn .headline.hl4:before{
+
+.collumn .headline.hl4:before {
     border-top: 1px solid #2f2f2f;
     content: '';
     width: 100px;
@@ -94,7 +99,8 @@ p{
     display: block;
     margin: 0 auto;
 }
-.collumn .headline.hl4:after{
+
+.collumn .headline.hl4:after {
     border-bottom: 1px solid #2f2f2f;
     content: '';
     width: 100px;
@@ -104,7 +110,7 @@ p{
 
 }
 
-.collumn .citation{
+.collumn .citation {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     line-height: 44px;
@@ -116,7 +122,8 @@ p{
     font-feature-settings: "liga", "dlig";
 
 }
-.collumn .citation:before{
+
+.collumn .citation:before {
     border-top: 1px solid #2f2f2f;
     content: '';
     width: 100px;
@@ -124,7 +131,8 @@ p{
     display: block;
     margin: 0 auto;
 }
-.collumn .citation:after{
+
+.collumn .citation:after {
     border-bottom: 1px solid #2f2f2f;
     content: '';
     width: 100px;
@@ -132,43 +140,51 @@ p{
     display: block;
     margin: 0 auto;
 }
+
 .collumn .figure {
-	  margin: 0 0 20px;
+    margin: 0 0 20px;
 }
-.collumn .figcaption{
-	font-style: italic;
-	font-size: 12px;
+
+.collumn .figcaption {
+    font-style: italic;
+    font-size: 12px;
 }
+
 .media {
     -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
     filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
     mix-blend-mode: multiply;
     width: 100%;
 }
+
 /*________________________________________________________________________________________________________________________________*/
 /*MEDIAQUERIES*/
 
 @media only all and (max-width: 1200px) {
-    .collumn{
+    .collumn {
         width: 31%;
     }
 
 }
-    @media only all and (max-width: 900px) {
-    .collumn{
+
+@media only all and (max-width: 900px) {
+    .collumn {
         width: 47%;
     }
 
 }
+
 @media only all and (max-width: 600px) {
-    .collumn{
+    .collumn {
         width: 100%;
     }
-	.collumn + .collumn {
-				border-left: none;
-      	border-bottom: 1px solid #2f2f2f;
-	}
-    header{
+
+    .collumn+.collumn {
+        border-left: none;
+        border-bottom: 1px solid #2f2f2f;
+    }
+
+    header {
         max-width: 320px;
         font-size: 60px;
         line-height: 54px;
