@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="success.css">
+    <title>VITEEE 2023</title>
 </head>
 
 <body>
@@ -31,7 +32,14 @@
 
     </svg>
     <h2> Successful Registration !</h2>
-    <button type="button">You are all set for #VITechno_2022</button><br>
+    <button type="button">You are all set for #VITEEE_2023
+        <br>
+        Generated Application ID: <span id="application"></span>
+    </button><br>
+    <script>
+        var app = Math.floor((Math.random() * 10000) + 2023001000);
+        document.getElementById("application").innerHTML = app;
+    </script>
 </body>
 
 </html>
