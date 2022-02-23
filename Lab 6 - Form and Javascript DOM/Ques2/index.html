@@ -1,0 +1,29 @@
+<html>
+
+<body>
+    <h1>Number generator </h1>
+    <div id="num"></div>
+    <script>
+        var count = 1;
+        var doc = document.getElementById('num');
+        var stri = "";
+        for (var i = 01234; i <= 98765; i++) {
+            var str = i.toString().padStart(5, '0');
+            if (str[0] != str[1] && str[0] != str[2] && str[0] != str[3] && str[0] != str[4] && str[1] != str[2] && 
+            str[1] != str[3] && str[1] != str[4] && str[2] != str[3] && str[2] != str[4] && str[3] != str[4]) {
+                if ((parseInt(str[0]) % 2 != 0 && parseInt(str[1]) % 2 != 0 && parseInt(str[2]) % 2 != 0 && parseInt(
+                        str[3]) % 2 != 0 && parseInt(str[4]) % 2 != 0) ||
+                    (parseInt(str[0]) % 2 == 0 && parseInt(str[1]) % 2 == 0 && parseInt(str[2]) % 2 == 0 && parseInt(
+                        str[3]) % 2 == 0 && parseInt(str[4]) % 2 == 0))
+                    continue;
+                else{
+                    stri+=(str+", ");
+                    count +=1;
+                }
+            }
+        }
+        console.log(stri);
+    </script>
+</body>
+
+</html>

@@ -1,25 +1,25 @@
-*{
+* {
     font-family: Arial;
     vertical-align: middle;
     margin-left: 10px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-label{
+label {
     margin-right: 10px;
     font-weight: bolder;
 }
 
-input{
+input {
     text-indent: 5px;
     margin-bottom: 5px;
     height: 30px;
 }
 
-p{
+p {
     font-weight: bolder;
     color: #f00;
     margin: 0;
@@ -28,17 +28,18 @@ p{
     display: none;
 }
 
-select{
+select {
     height: 30px;
     margin-bottom: 5px;
     text-indent: 5px;
     width: 150px;
 }
-option{
+
+option {
     text-indent: 5px;
 }
 
-input[type=button]{
+input[type=button] {
     border-radius: 7px;
     padding: 5px 15px;
     border: none;

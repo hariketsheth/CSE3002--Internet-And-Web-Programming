@@ -11,49 +11,48 @@
         <table cellspacing="25">
             <tr>
                 <td><label for="email">Your Email </label></td>
-                <td><input type="email" id="email" name="email" placeholder="Email address"  autocomplete="off">
+                <td><input type="email" id="email" name="email" placeholder="Email address" autocomplete="off">
                     <p id="error_email">Please use a valid email address</p>
                 </td>
             </tr>
             <tr>
                 <td><label for="confirm_ema">Confirm Email </label></td>
-                <td><input type="email" id="confirm_ema" name="confirm_ema" placeholder="Confirm Email address" 
+                <td><input type="email" id="confirm_ema" name="confirm_ema" placeholder="Confirm Email address"
                         autocomplete="off">
                     <p id="error_emailc">Email Address Doesn't match</p>
                 </td>
             </tr>
             <tr>
-            <td><label for="country">Country </label></td>
-            <td><select id="country">
-                <option value="0" disabled selected>Select the Country</option>
-                <option value="1">United States</option>
-                <option value="2">India</option>
-                <option value="3">China</option>
-                <option value="4">South Africa</option>
-                <option value="5">Russia</option>
-                <option value="6">Indonesia</option>
-                <option value="7">Malaysia</option>
-            </select>
-            <p id="error_country">Please select a Country</p>
-            </td>
+                <td><label for="country">Country </label></td>
+                <td><select id="country">
+                        <option value="0" disabled selected>Select the Country</option>
+                        <option value="1">United States</option>
+                        <option value="2">India</option>
+                        <option value="3">China</option>
+                        <option value="4">South Africa</option>
+                        <option value="5">Russia</option>
+                        <option value="6">Indonesia</option>
+                        <option value="7">Malaysia</option>
+                    </select>
+                    <p id="error_country">Please select a Country</p>
+                </td>
             </tr>
             <tr>
                 <td><label for="zip">Zip Code </label></td>
-                <td><input type="number" id="zip" name="zip" min="100000" max="999999" placeholder="Zip Code" 
+                <td><input type="number" id="zip" name="zip" min="100000" max="999999" placeholder="Zip Code"
                         autocomplete="off">
                     <p id="error_zip">Enter a valid zip code</p>
                 </td>
             </tr>
             <tr>
                 <td><label for="pass">Password </label></td>
-                <td><input type="password" id="pass" name="pass" placeholder="Enter password" 
-                        autocomplete="off">
+                <td><input type="password" id="pass" name="pass" placeholder="Enter password" autocomplete="off">
                     <p id="error_pass">Your password must be between 6-16 characters long.</p>
                 </td>
             </tr>
             <tr>
                 <td><label for="confirm_pass">Confirm Password</label></td>
-                <td><input type="password" id="confirm_pass" name="confirm_pass" placeholder="Confirm Password" 
+                <td><input type="password" id="confirm_pass" name="confirm_pass" placeholder="Confirm Password"
                         autocomplete="off">
                     <p id="error_passc">Password Doesn't match</p>
                 </td>
@@ -71,7 +70,7 @@
         </table>
     </form>
     <script>
-        function validate(){
+        function validate() {
             var form = document.getElementById('form_final');
             var email = document.getElementById('email').value;
             var email_c = document.getElementById('confirm_ema').value;
@@ -83,54 +82,47 @@
             var pass_c = document.getElementById('confirm_pass').value;
             var check = document.getElementById('terms').checked;
 
-            if(!email.match(/^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,15}$/)){
-                document.getElementById('error_email').style.display='block';
-                document.getElementById('email').style.border='2px solid #FF0000';
-            }
-            else{
-                document.getElementById('email').style.border='2px solid #04a104';
-                document.getElementById('error_email').style.display='none';
-                if(email !== email_c){
-                    document.getElementById('confirm_ema').style.border='2px solid #FF0000';
-                    document.getElementById('error_emailc').style.display='block';
-                }
-                else{
-                    document.getElementById('confirm_ema').style.border='2px solid #04a104';
-                    document.getElementById('error_emailc').style.display='none';
-                    if(country==0){
-                        document.getElementById('country').style.border='2px solid #FF0000';
-                        document.getElementById('error_country').style.display='block';
-                    }
-                    else{
-                        document.getElementById('country').style.border='2px solid #04a104';
-                        document.getElementById('error_country').style.display='none';
-                        if(!(zip.length==6)){
-                            document.getElementById('zip').style.border='2px solid #FF0000';
-                            document.getElementById('error_zip').style.display='block';
-                        }
-                        else{
-                            document.getElementById('zip').style.border='2px solid #04a104';
-                            document.getElementById('error_zip').style.display='none';
-                            if(pass.length<6 || pass.length>16){
-                                document.getElementById('pass').style.border='2px solid #FF0000';
-                                document.getElementById('error_pass').style.display='block';
-                            }
-                            else{
-                                document.getElementById('pass').style.border='2px solid #04a104';
-                                document.getElementById('error_pass').style.display='none';
-                                if(pass_c!==pass){
-                                    document.getElementById('confirm_pass').style.border='2px solid #FF0000';
-                                    document.getElementById('error_passc').style.display='block';
-                                }
-                                else{
-                                    document.getElementById('confirm_pass').style.border='2px solid #04a104';
-                                    document.getElementById('error_passc').style.display='none';
-                                    if(!check){
+            if (!email.match(/^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,15}$/)) {
+                document.getElementById('error_email').style.display = 'block';
+                document.getElementById('email').style.border = '2px solid #FF0000';
+            } else {
+                document.getElementById('email').style.border = '2px solid #04a104';
+                document.getElementById('error_email').style.display = 'none';
+                if (email !== email_c) {
+                    document.getElementById('confirm_ema').style.border = '2px solid #FF0000';
+                    document.getElementById('error_emailc').style.display = 'block';
+                } else {
+                    document.getElementById('confirm_ema').style.border = '2px solid #04a104';
+                    document.getElementById('error_emailc').style.display = 'none';
+                    if (country == 0) {
+                        document.getElementById('country').style.border = '2px solid #FF0000';
+                        document.getElementById('error_country').style.display = 'block';
+                    } else {
+                        document.getElementById('country').style.border = '2px solid #04a104';
+                        document.getElementById('error_country').style.display = 'none';
+                        if (!(zip.length == 6)) {
+                            document.getElementById('zip').style.border = '2px solid #FF0000';
+                            document.getElementById('error_zip').style.display = 'block';
+                        } else {
+                            document.getElementById('zip').style.border = '2px solid #04a104';
+                            document.getElementById('error_zip').style.display = 'none';
+                            if (pass.length < 6 || pass.length > 16) {
+                                document.getElementById('pass').style.border = '2px solid #FF0000';
+                                document.getElementById('error_pass').style.display = 'block';
+                            } else {
+                                document.getElementById('pass').style.border = '2px solid #04a104';
+                                document.getElementById('error_pass').style.display = 'none';
+                                if (pass_c !== pass) {
+                                    document.getElementById('confirm_pass').style.border = '2px solid #FF0000';
+                                    document.getElementById('error_passc').style.display = 'block';
+                                } else {
+                                    document.getElementById('confirm_pass').style.border = '2px solid #04a104';
+                                    document.getElementById('error_passc').style.display = 'none';
+                                    if (!check) {
                                         alert("Please Accept the Terms of use");
-                                    }
-                                    else{
-                                        var str = "Form Submitted Successfully\n\n"+"1. Email: "+email+"\n";
-                                        str += "2. Country: "+val+"\n3. Pin Code: "+zip+"\n";
+                                    } else {
+                                        var str = "Form Submitted Successfully\n\n" + "1. Email: " + email + "\n";
+                                        str += "2. Country: " + val + "\n3. Pin Code: " + zip + "\n";
                                         alert(str);
                                         document.getElementById('form_final').submit();
 
