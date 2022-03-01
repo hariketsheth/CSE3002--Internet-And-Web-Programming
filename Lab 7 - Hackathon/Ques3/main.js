@@ -11,7 +11,8 @@ submit.addEventListener('click', () => {
     c3 = false,
     c4 = false;
   const usernameValue = username.value;
-  if (usernameValue === '') {
+  let user_reg=/^[A-Za-z][A-Za-z0-9_]{5,29}$/;
+  if (usernameValue === ''|| !usernameValue.match(user_reg)) {
     document.getElementById('error-msg-user').style.display = 'block';
     document.getElementById('check1').style.display = 'none';
     document.getElementById('error1').style.display = 'block';
@@ -24,7 +25,8 @@ submit.addEventListener('click', () => {
   }
 
   const fullnameValue = fullname.value;
-  if (fullnameValue === '') {
+  let full_name=/^[A-Za-z][A-Za-z0-9_\s]{5,29}$/;
+  if (fullnameValue === ''|| !fullnameValue.match(full_name)) {
     document.getElementById('error-msg-full').style.display = 'block';
     document.getElementById('check2').style.display = 'none';
     document.getElementById('error2').style.display = 'block';
