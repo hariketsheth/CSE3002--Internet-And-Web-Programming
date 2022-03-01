@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Hariket Sukesh Kumar Sheth</title>
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div class="hero">
+      <img width="450" height="150" style="
+            position: block;
+            margin: 10px;
+          " src="hack.png" />
+      <h1 class="main-heading animate__animated animate__fadeInDown">
+        <br>
+        HackVIT 2022
+      </h1>
+      <p class="paragraph animate__animated animate__fadeInUp">
+        HackVIT is an annual national hackathon organized by the members of Student Chapter.
+        Continuing the legacy forward, the fourth edition of the event, HackVIT 2.0 gives a chance to all the
+        ingenious developers to subsume creativity with ambition and give rise to innovation in the burgeoning world of
+        technology. The event is a 36-hour long hackathon, scheduled from March 11, 2022 to March 13, 2022.
+      </p>
+    </div>
+
+    <div class="cta">
+      <div class="feature animate__animated animate__fadeIn">
+        <span>HackVIT Registrations. <br></span>
+        Didn't Apply Yet? What are you waiting for - Apply Now!!
+      </div>
+      <form class="form" id="form">
+        <div class="input-wrapper animate__animated animate__fadeIn">
+          <label for="username" class="hidden">Username </label>
+          <i class="fa fa-check-circle fa-2x" id="check1" style="
+                  position: absolute;
+                  display: none;
+                  top: 15px;
+                  margin-left: 90%;
+                  color: rgb(124, 255, 30);
+                  opacity: 0.5;
+                "></i>
+          <i class="fa fa-times-circle fa-2x" id="error1" style="
+                    position: absolute;
+                    top: 15px;
+                    display: none;
+                    margin-left: 90%;
+                    color: rgb(255, 44, 7);
+                    opacity: 0.5;
+                  "></i>
+          <input type="text" name="username" id="user-name" placeholder="JEE Application Number"
+            class="form__username" />
+          <p class="error" id="error-msg-user">JEE Application Number cannot be empty! </p>
+        </div>
+        <div class="input-wrapper animate__animated animate__fadeIn">
+          <label for="full-name" class="hidden">Full Name</label>
+          <i class="fa fa-check-circle fa-2x" id="check2" style="
+                  position: absolute;
+                  display: none;
+                  top: 15px;
+                  margin-left: 90%;
+                  color: rgb(124, 255, 30);
+                  opacity: 0.5;
+                "></i>
+          <i class="fa fa-times-circle fa-2x" id="error2" style="
+                    position: absolute;
+                    top: 15px;
+                    display: none;
+                    margin-left: 90%;
+                    color: rgb(255, 44, 7);
+                    opacity: 0.5;
+                  "></i>
+          <input type="text" name="full-name" id="full-name" placeholder="Full Name" class="form__full-name" />
+          <p class="error" id="error-msg-full">Name cannot be empty! </p>
+        </div>
+        <div class="input-wrapper animate__animated animate__fadeIn">
+          <label for="email" class="hidden">Email</label>
+          <i class="fa fa-check-circle fa-2x" id="check3" style="
+                  position: absolute;
+                  display: none;
+                  top: 15px;
+                  margin-left: 90%;
+                  color: rgb(124, 255, 30);
+                  opacity: 0.5;
+                "></i>
+          <i class="fa fa-times-circle fa-2x" id="error3" style="
+                    position: absolute;
+                    top: 15px;
+                    display: none;
+                    margin-left: 90%;
+                    color: rgb(255, 44, 7);
+                    opacity: 0.5;
+                  "></i>
+          <input type="email" name="email" id="email" placeholder="Email Address" class="form__email" />
+          <p class="error" id="error-msg-email">This doesn't seem to be a correct email! </p>
+        </div>
+        <div class="input-wrapper animate__animated animate__fadeIn">
+          <label for="password" class="hidden">Password</label>
+          <i class="fa fa-check-circle fa-2x" id="check4" style="
+                  position: absolute;
+                  display: none;
+                  top: 15px;
+                  margin-left: 90%;
+                  color: rgb(124, 255, 30);
+                  opacity: 0.5;
+                "></i>
+          <i class="fa fa-times-circle fa-2x" id="error4" style="
+                    position: absolute;
+                    top: 15px;
+                    display: none;
+                    margin-left: 90%;
+                    color: rgb(255, 44, 7);
+                    opacity: 0.5;
+                  "></i>
+          <input type="password" name="password" id="password" placeholder="Password" class="form__password" />
+          <p class="error" id="error-msg-pass">Password should contain minimum 8 charaters, including one special
+            symbol, number, uppercase and lowercase </p>
+        </div>
+        <div class="button-wrapper">
+          <button type="button" id="submit" class="animate__animated animate__bounceIn">
+            Register Now
+          </button>
+        </div>
+        <p class="form__disclaimer animate__animated animate__fadeIn">
+          By clicking the button, you are agreeing to HackVIT 2022
+          <a href="#">Terms and Services.</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
