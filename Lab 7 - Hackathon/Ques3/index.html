@@ -55,8 +55,7 @@
                     color: rgb(255, 44, 7);
                     opacity: 0.5;
                   "></i>
-          <input type="text" name="username" id="user-name" placeholder="Username"
-            class="form__username" />
+          <input type="text" name="username" id="user-name" placeholder="Username" class="form__username" />
           <p class="error" id="error-msg-user">Enter a valid username! </p>
         </div>
         <div class="input-wrapper animate__animated animate__fadeIn">
@@ -122,6 +121,36 @@
           <input type="password" name="password" id="password" placeholder="Password" class="form__password" />
           <p class="error" id="error-msg-pass">Password should contain minimum 8 charaters, including one special
             symbol, number, uppercase and lowercase </p>
+        </div>
+        <div class="input-wrapper animate__animated animate__fadeIn">
+          <label for="theme" class="hidden">Select your Theme</label>
+          <i class="fa fa-check-circle fa-2x" id="check5" style="
+                  position: absolute;
+                  display: none;
+                  top: 15px;
+                  margin-left: 90%;
+                  color: rgb(124, 255, 30);
+                  opacity: 0.5;
+                "></i>
+          <i class="fa fa-times-circle fa-2x" id="error5" style="
+                    position: absolute;
+                    top: 15px;
+                    display: none;
+                    margin-left: 90%;
+                    color: rgb(255, 44, 7);
+                    opacity: 0.5;
+                  "></i>
+          <select name="theme" id="theme" class="form__theme" />
+          <option selected disabled value="0">Select Theme:</option>
+          <option value="1">Artificial Intelligence</option>
+          <option value="2">Blockchain</option>
+          <option value="3">Web Development</option>
+          <option value="4">MedCare</option>
+          <option value="5">Fintech</option>
+          <option value="6">Education</option>
+          <option value="7">Societal Impact</option>
+          </select>
+          <p class="error" id="error-msg-theme">Please select a valid theme! </p>
         </div>
         <div class="button-wrapper">
           <button type="button" id="submit" class="animate__animated animate__bounceIn">

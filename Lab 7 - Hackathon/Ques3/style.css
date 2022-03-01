@@ -163,17 +163,20 @@ body {
 }
 
 .form input,
+.form select,
 .form .button-wrapper {
   height: 7rem;
   margin-bottom: 2rem;
 }
 
 .form input,
+.form select,
 .form button {
   border-radius: 6px;
 }
 
-.form input {
+.form input,
+.form select {
   width: 100%;
   padding-left: 2rem;
   border: 1px solid #dedede;
