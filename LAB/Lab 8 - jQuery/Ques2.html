@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+  <title>Hariket Sukesh Kumar Sheth</title>
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div class="hero">
+      <h1 class="main-heading animate__animated animate__fadeInDown">
+        Lab 7 - Internet and Web Programming
+      </h1>
+      <p class="paragraph animate__animated animate__fadeInUp">
+        <h3 style="text-align: center; color: hsl(68, 100%, 82%);">Hariket Sukesh Kumar Sheth | 20BCE1975</h3><br>
+        Exercise 2: Read a number from the user and display the highest even and odd digits of the number in the click event of the button. Implement the same using jquery with appropriate html code.
+        Then throw the exception if the odd digit is highest digit.
+        
+      </p>
+      <br /><br />
+      <span id="number1" for="selection">Enter the Number: </span>
+      <input type="text" id="input1"
+        style="font-weight: bolder; text-align: center; color: #000; text-indent: 40px; border: none; height: 50px; border-radius: 30px; background: #eee;">
+      <br><br>
+      
+      <span id="number1" for="selection">The result is:</span>
+      <input type="text" disabled id="result1"
+        style="font-weight: bolder; text-align: center; color: #000; text-indent: 40px; border: none; height: 50px; border-radius: 30px; background: #eee;">
+      <br>
+      <div id="error" >
+          <img src="error.png"><p>The Odd Highest Number is greater than Even.</p>
+      </div>
+      <br>
+      <div style="display: grid; grid-template-columns: auto auto;">
+        <a style="text-decoration: none;"><button id="submit"
+            style="margin-left: 50%; border: none; padding: 10px; background: #fff; width: 80%; color: #0140a5; font-weight: bolder; font-size: 2rem; border-radius: 10px;"
+            value="Run">Run</button></a>
+      </div>
+      <script>
+        $("#submit").click(function () {
+          var $number = parseInt($('#input1').val());
+          var $temp = $number;
+          var $odd = -1, $even = -1;
+          while($temp>0){
+            if(($temp%10)%2==0 && ($temp%10)>$even)
+                $even = $temp%10;
+            if(($temp%10)%2!=0 && ($temp%10)>$odd)
+                $odd = $temp%10;
+            $temp = parseInt($temp/10);
+          }
+          if($odd>$even){
+            $('#result1').val("Error Raised !!");
+            $("#error").attr("style", "display:block");
+          }
+          else{
+            $('#result1').val("Even: "+$even+"\tOdd: "+$odd);
+            $("#error").attr("style", "display:none");
+          }
+        });
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

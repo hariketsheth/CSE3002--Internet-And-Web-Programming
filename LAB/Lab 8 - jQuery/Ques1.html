@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>IWP - CSE3002 - L7 L8</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      p {
+        padding: 30px;
+        background: #f0e68c;
+        text-align: center;
+        border-radius: 20px;
+        width: 70%;
+        margin: 10%;
+        font-weight: bolder;
+        font-family: Arial;
+        border: 5px dotted #aba255
+      }
+      button {
+        margin: 20px;
+        padding: 15px;
+        border: none;
+        border-radius: 30px;
+        font-weight: bolder;
+        color: #fff;
+      }
+      #btn-1{
+        background: rgb(228, 98, 46);
+      }
+      #btn-2{
+        background: #000;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $(".hide-btn1").click(function () {
+          $("#p1").hide();
+        });
+
+        $(".hide-btn2").click(function () {
+          $("#p2").hide();
+        });
+
+        $(".hide-btn3").click(function () {
+          $("#p3").hide();
+        });
+
+        $(".show-btn1").click(function () {
+          $("#p1").show();
+        });
+
+        $(".show-btn2").click(function () {
+          $("#p2").show();
+        });
+
+        $(".show-btn3").click(function () {
+          $("#p3").show();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div style="display: grid; grid-template-columns: auto auto auto">
+      <button type="button" id="btn-1" class="hide-btn1">Hide P1</button>
+      <button type="button" id="btn-1" class="hide-btn2">Hide P2</button>
+      <button type="button" id="btn-1" class="hide-btn3">Hide P3</button>
+    </div>
+    <div style="display: grid; grid-template-columns: auto auto auto">
+      <p id="p1">Paragraph 1</p>
+      <p id="p2">Paragraph 2</p>
+      <p id="p3">Paragraph 3</p>
+    </div>
+    <div style="display: grid; grid-template-columns: auto auto auto">
+      <button type="button" id="btn-2" class="show-btn1">Show P1</button>
+      <button type="button" id="btn-2" class="show-btn2">Show P2</button>
+      <button type="button" id="btn-2" class="show-btn3">Show P3</button>
+    </div>
+  </body>
+</html>
